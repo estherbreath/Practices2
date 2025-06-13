@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Intro</title>
-</head>
-<body>
-    <h1 style="text-align: center; background-color: aqua;">Intro to JavaScript</h1>
-    
-
-
-
+  </head>
+  <body>
+    <h1 style="text-align: center; background-color: aqua">
+      Intro to JavaScript
+    </h1>
 
     <script>
+      // data types: number
+      // console.log (2);
+      // console.log (2 + "2");
+      // console.log(Number("2") + 3);
+      // console.log("Esther".length);
+      // console.log("Esther".includes('s'));
+      // console.log("I am running".lastIndexOf());
+      // console.log("I am running".toUpperCase());
 
-        // data types: number 
-        // console.log (2);
-        // console.log (2 + "2");
-        // console.log(Number("2") + 3);
-        // console.log("Esther".length);
-        // console.log("Esther".includes('s'));
-        // console.log("I am running".lastIndexOf());
-        // console.log("I am running".toUpperCase());
+      // Array can hold similar items
 
-        // Array can hold similar items
+      // [1,2,3,4,5, "orange", false, null, undefined];
 
-        // [1,2,3,4,5, "orange", false, null, undefined];
+      // //object key value pair
 
-        // //object key value pair
-        
-        // {name: "Esther", age: 10, maritalStatus: true}
+      // {name: "Esther", age: 10, maritalStatus: true}
 
-        //variables- containers that can store values
+      //variables- containers that can store values
 
-        // keywords of variable - let, const, var
+      // keywords of variable - let, const, var
 
-        // let a = 5;
-        // a = 6
-        // console.log(a);
-        // console.log(typeof 5);
+      // let a = 5;
+      // a = 6
+      // console.log(a);
+      // console.log(typeof 5);
 
-        
-        // a = 6
-        // // a name
-        // // 5 vallue
-        // // = is an assignment
-        // let x = "hello world";
+      // a = 6
+      // // a name
+      // // 5 vallue
+      // // = is an assignment
+      // let x = "hello world";
 
-        // const x = 23; //cnnnot be changed
+      // const x = 23; //cnnnot be changed
 
+      // console.log(a, "This is for let");
+      // console.log(x, "This is for const");
 
-        // console.log(a, "This is for let");
-        // console.log(x, "This is for const");
-
-
-       /* let fruits = ["mango", "gauva", "apple"];
+      /* let fruits = ["mango", "gauva", "apple"];
         let person = {name: "Esther", age: 10, maritalStatus: true};
 
 
@@ -99,7 +93,7 @@
         //  }
         */
 
-       /* const age = 15;
+      /* const age = 15;
         const isOldEnough = age >= 18;
 
         if(age >= 18) {
@@ -110,20 +104,20 @@
         }
         */
 
-        // falsy values 0, ''. undefined, null, NaN
-        // the will be converted to false when changed to a boolean
+      // falsy values 0, ''. undefined, null, NaN
+      // the will be converted to false when changed to a boolean
 
-        // console.log(Boolean(0));
-        // console.log(Boolean(undefined));
-        // console.log(Boolean('Esther'));
+      // console.log(Boolean(0));
+      // console.log(Boolean(undefined));
+      // console.log(Boolean('Esther'));
 
-       const favoriteNumber = Number(prompt("What's your favorite numbser?"));
-    //    console.log(favoriteNumber);
-       console.log(typeof favoriteNumber);
+      // const favoriteNumber = Number(prompt("What's your favorite numbser?"));
+      // //    console.log(favoriteNumber);
+      // console.log(typeof favoriteNumber);
 
-    //    if (favoriteNumber == 28) {
-    //     console.log('28 is super cool');
-    //    }
+      //    if (favoriteNumber == 28) {
+      //     console.log('28 is super cool');
+      //    }
 
       /* if (favoriteNumber === 28) {
         console.log('super cool')
@@ -138,47 +132,52 @@
        }
       */
 
-      
+      // switch statement - multiple if else statements
 
+      const day = "sunday";
 
+      switch (day) {
+        case "monday":
+          console.log("Go to work");
+          console.log("Cook");
+          break;
+        case "tuesday":
+          console.log("Code all day");
+          break;
+        case "wednesday":
+        case "thursday":
+        case "friday":
+          console.log("kill the bugs!");
+          break;
+        case "saturday":
+          console.log("flex the weekend!");
+          break;
+        case "sunday":
+          console.log("Church things!");
+          break;
+        default:
+          console.log("Not a valid day");
+      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-         
-
-
-
-
-
-
-
-
+      // using if/else
+      if (day === "monday") {
+        console.log("Go to work");
+        console.log("cook");
+      } else if (day === "tuesday") {
+        console.log("Code all day");
+      } else if (
+        day === "wednesday" ||
+        day === "thursday" ||
+        day === "friday"
+      ) {
+        console.log("kill the bugs!");
+      } else if (day === "saturday") {
+        console.log("flex the weekend!");
+      } else if (day === "sunday") {
+        console.log("Church things!");
+      } else {
+        console.log("Not a valid day");
+      }
     </script>
-</body>
+  </body>
 </html>
