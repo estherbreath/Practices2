@@ -10,7 +10,11 @@
       Intro to JavaScript
     </h1>
 
+    <button onclick="displayMessage">Click Me</button>
+    <p id="demo"></p>
+
     <script>
+      "use strict";
       // data types: number
       // console.log (2);
       // console.log (2 + "2");
@@ -134,7 +138,7 @@
 
       // switch statement - multiple if else statements
 
-      const day = "sunday";
+      /*  const day = "sunday";
 
       switch (day) {
         case "monday":
@@ -178,6 +182,71 @@
       } else {
         console.log("Not a valid day");
       }
+        */
+      // conditional statement
+      // ternary operator
+      // const age = 23;
+      // age >= 18
+      //   ? console.log("You can drink wine")
+      //   : console.log("You can drink water");
+
+      // better way
+      // const drink = age >= 18 ? "wine" : "water";
+      // console.log(drink);
+
+      // console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
+      // Destructuring
+      // const bosslady = {
+      //   name: "Esther",
+      //   age: 20,
+      //   occupation: "programmer",
+      //   level: "highest",
+      // };
+      // // const { name, age } = bosslady;
+      // //rest
+      // const { name, age, ...others } = bosslady;
+      // console.log(name, age, others);
+      // // spread
+      // const newBosslady = { ...bosslady, state: "kaduna", age: 22 }; // we can add new proerties or override existing one
+      // console.log(newBosslady);
+
+      // Map
+      // const numb = [23, 22, 40, 45];
+      // The map takes the arrays and performs an operation on it
+      // el = element
+      // const getNum = numb.map((el) => el * 2);
+      // console.log(getNum);
+
+      // Filter - based on condition
+      // const highNum = numb.filter((num) => num < 40);
+      // // highNum.includes(10);
+      // console.log(highNum);
+
+      // Reduce methodt rt
+      // It has ths accumulator value acc, the fallback function, and the starter number 0
+      // const totalNum = numb.reduce((acc, num) => acc + num, 0);
+      // console.log(totalNum);
+
+      // // Sort Method
+      // const sorted = numb.slice().sort((a, b) => a - b); //a-b sorts the array in ascending order b-a = descnding
+      // // You can call slice on the array to make an original array and still have the sorted copy
+      // console.log(sorted);
+      // console.log(numb);
+
+      //Fetching data - using promises
+      // fetch("https://jsonplaceholder.typicode.com/todos")
+      //   .then((res) => res.json())
+      //   .then((data) => console.log(data));
+
+      // Asyncvawait
+      async function getTodos() {
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos"); // ✅ fetch the URL
+        const data = await res.json(); // ✅ parse the JSON
+        console.log(data);
+      }
+
+      getTodos();
     </script>
   </body>
 </html>
